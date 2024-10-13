@@ -1,4 +1,4 @@
-# Chapter 6: Authentication System
+# Chapter 9: Authentication System
 
 In this chapter, we will explore the authentication system of the application, which is implemented using **Passport.js** with the **Google OAuth2 strategy**.
 

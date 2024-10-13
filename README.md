@@ -11,7 +11,8 @@ Denne digitale boken vil inneholde det vi jobber med i faget.
 5. [API Endpoints and Routing](chapter4.md)
 5. [Sessions](chapter5Sessions.md)
 6. [Middleware](chapter6Middleware.md)
-7. [User Authentication](chapter7Oauth.md)
-2. [Working with Sessions in Node.js](chapter5Sessions.md)
+7. [Innlogging og hashing](chapter7innloggingOgHashing.md)
+7. [Google innlogging](chapter9Oauth.md)
+
 9. [Deployment and Configuration](chapter6.md)
 

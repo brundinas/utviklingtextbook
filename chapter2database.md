@@ -1,3 +1,4 @@
+#Database
 Vi benytter SQLite som database. 
 SQLite studio er et frontend verktøy for å kjøre sql, endre tabeller. 
 Den kan lastes ned herfra: https://www.sqlitestudio.pl/
