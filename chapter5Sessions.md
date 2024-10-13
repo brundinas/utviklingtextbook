@@ -8,7 +8,7 @@ In this chapter, we will look at how to store information about a user in a Node
 
 First, let's see how we can use sessions in practice and understand what they are doing.
 
-![Figure 1-1](../img/sessions.jpg "Sessions")
+![Figure 1-1](https://brundinas.github.io/utviklingtextbook/img/sessions.jpg "Sessions")
 
 ## Example 1 - Saving Visit Count
 
