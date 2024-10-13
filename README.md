@@ -1,4 +1,4 @@
-# Digital Textbook on Web Application Development
+# En slags lærebok i faget utvikling
 
 Welcome to this digital textbook. Below is the table of contents for the different chapters available in this repository.
 
