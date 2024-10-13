@@ -1,9 +1,9 @@
 # En slags lærebok i faget utvikling
 
-Welcome to this digital textbook. Below is the table of contents for the different chapters available in this repository.
+Denne digitale boken vil inneholde det vi jobber med i faget.
 
 ## Table of Contents
-
+![Figure 1-1](https://brundinas.github.io//utviklingtextbook//img//sessions.jpg)
 1. [Introduction](chapter1.md)
 2. [Working with Sessions in Node.js](chapter5Sessions.md)
 3. [Database Interaction in Node.js](chapter3.md)
