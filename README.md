@@ -5,7 +5,7 @@ Denne digitale boken vil inneholde det vi jobber med i faget.
 ## Table of Contents
 
 1. [JavaScript - grunnleggende koding](chapter1IntroJavascript.md)
-2. [Database og SQL](chapter2Database.md)
+2. [Database og SQL](chapter2database.md)
 3. [Oversikt](chapter4overview.md)
 4. [Working with Sessions in Node.js](chapter5Sessions.md)
 5. [API Endpoints and Routing](chapter4.md)
