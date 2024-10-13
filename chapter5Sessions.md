@@ -1,4 +1,3 @@
-Sure! Here's the content in pure Markdown format so you can copy it directly into your GitHub project:
 
 ```markdown
 # Working with Sessions in Node.js
@@ -8,6 +7,8 @@ In this chapter, we will look at how to store information about a user in a Node
 - Saving settings a user has applied, such as preferences in a shopping cart
 
 First, let's see how we can use sessions in practice and understand what they are doing.
+
+![Figure 1-1](https://raw.github.com/brundinas/utviklingtextbook/img/sessions.jpg "Sessions")
 
 ## Example 1 - Saving Visit Count
 
