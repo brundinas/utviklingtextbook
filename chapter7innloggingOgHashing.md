@@ -52,8 +52,9 @@ app.use(session({
 
 // Simulerer en database av brukere med hash-verdi for passord
 //Legg inn denne hashete passordet for en av brukeree i databasen 
-//password: '$2b$10$TdG0ZjOgPSV8DnvxsV6KOemTr.3dyuC.RSNXcQGyJsXaIgPi4tu3K' 
-// Hash av "passord123"
+//password: '$2b$10$OaYrsjfSOxIlRl3l6brlTe4erojrTxjgsYSzUNF.uCa9Ny9XMmXoS' 
+//          '$2b$10$OaYrsjfSOxIlRl3l6brlTe4erojrTxjgsYSzUNF.uCa9Ny9XMmXoS'
+// Hash av "Passord123"
 
 // Hashing av nytt passord (kan brukes for å opprette brukere)
 //    const saltRounds = 10;
