@@ -1,4 +1,4 @@
-# Grunnleggende JavaScript
+# Kapittel 1: Grunnleggende JavaScript
 
 JavaScript er et kraftig programmeringsspråk som brukes til å lage dynamiske webapplikasjoner. I dette kapitlet vil vi se på noen grunnleggende konsepter i JavaScript, inkludert variabler, datatyper, kontrollstrukturer, funksjoner, og objekter. For å bli komfortabel med disse konseptene, anbefales det at du eksperimenterer med koden og ser hvordan den fungerer i praksis.
 

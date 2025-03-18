@@ -1,4 +1,4 @@
-### Hva er Middleware?
+### Kapittel 6: Hva er Middleware?
 
 **Middleware** refererer til funksjoner som har tilgang til **request**-objektet (`req`), **response**-objektet (`res`), og **next**-funksjonen i applikasjonens forespørsels-syklus. Middleware fungerer som et lag mellom forespørsler og svar, som lar deg håndtere data, utføre logikk, validere brukere, og mye mer, før du sender en endelig respons.
 

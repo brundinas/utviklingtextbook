@@ -1,3 +1,5 @@
+# Kapittel 7: Innlogging og hashing
+
 # Eksempel: Sikker innlogging med sessions og bcrypt
 
 Dette eksempelet viser hvordan du kan lage et enkelt innloggingssystem med JavaScript (Node.js) og Express. Vi bruker `express-session` for å holde brukeren innlogget, og `bcrypt` for å sikre passordene ved å hashe og salte dem før de lagres i databasen.

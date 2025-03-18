@@ -1,3 +1,5 @@
+# Kapittel 8: Feilhåndtering
+
 ### Eksempel: Feilhåndtering i Express
 Feilhåndtering med middleware er en viktig del av utvikling med **Express**. En typisk feilbehandlingsmiddleware har tilgang til den samme informasjonen som vanlig middleware (request, response, og `next`), men i tillegg tar den imot en ekstra **error-parameter**. Dette lar den håndtere feil som oppstår under kjøring av andre middleware eller ruter.
 

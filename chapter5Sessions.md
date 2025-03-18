@@ -1,6 +1,6 @@
 
 ```markdown
-# Working with Sessions in Node.js
+# Kapittel 5: Sessions in Node.js
 
 In this chapter, we will look at how to store information about a user in a Node.js application session. This is particularly useful for:
 - Storing whether a user is logged in or not
