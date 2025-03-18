@@ -1,4 +1,4 @@
-#Kaåittel 3: Oversikt over hvordan express og session fungerers
+# Kapittel 3: Oversikt over hvordan express og session fungerer
 
 ### 1. **Express**
    **Express** er et minimalt og fleksibelt **webapplikasjonsrammeverk for Node.js** som tilbyr funksjoner for å bygge webapplikasjoner og API-er. Det brukes ofte til å lage server-side-applikasjoner som håndterer forespørsler og svar i en webapplikasjon.

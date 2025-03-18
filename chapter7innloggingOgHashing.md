@@ -53,9 +53,8 @@ app.use(session({
 }));
 
 // Simulerer en database av brukere med hash-verdi for passord
-//Legg inn denne hashete passordet for en av brukeree i databasen 
-//password: '$2b$10$OaYrsjfSOxIlRl3l6brlTe4erojrTxjgsYSzUNF.uCa9Ny9XMmXoS' 
-//          '$2b$10$OaYrsjfSOxIlRl3l6brlTe4erojrTxjgsYSzUNF.uCa9Ny9XMmXoS'
+// Legg inn denne hashete passordet for en av brukeree i databasen 
+// password: '$2b$10$OaYrsjfSOxIlRl3l6brlTe4erojrTxjgsYSzUNF.uCa9Ny9XMmXoS' 
 // Hash av "Passord123"
 
 // Hashing av nytt passord (kan brukes for å opprette brukere)
@@ -73,8 +72,8 @@ app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     
     // Finn brukeren basert på brukernavn
-    const user = //hent bruker fra databasen basert på brukernavn
-    
+    const sql = db.prepare('SELECT password FROM user where username =?') 
+    const user = sql.all(username)   
     if (!user) {
         return res.status(401).send('Ugyldig brukernavn eller passord');
     }
@@ -93,13 +92,18 @@ app.post('/login', async (req, res) => {
 });
 
 // Beskyttet rute som krever at brukeren er innlogget
-app.get('/dashboard', (req, res) => {
-    if (req.session.loggedIn) {
-        res.send(`Velkommen, ${req.session.username}!`);
-    } else {
-        res.status(403).send('Du må være logget inn for å se denne siden.');
-    }
+app.get('/dashboard',  checkLoggedIn, (req, res) => {
+          res.redirect("/dashboard.html"); // Redirect on successful login
 });
+
+function checkLoggedIn(req, res, next) {
+    if (req.session && req.session.loggedIn) {
+        next(); // Bruker er loggetinn, gå videre
+    } else {
+        res.redirect('/login'); // Ikke autentisert, omdiriger
+    }
+}
+
 ```
 
 ### Forklaring av koden:
@@ -107,7 +111,7 @@ app.get('/dashboard', (req, res) => {
    
 2. **Session**: Hvis brukeren har oppgitt riktig passord, opprettes en session med `req.session.loggedIn = true`. Dette betyr at brukeren forblir innlogget på serveren til de logger ut eller sesjonen utløper.
 
-3. **Beskyttet rute**: Ruten `/dashboard` krever at brukeren er innlogget for å få tilgang. Hvis brukeren ikke er innlogget, returneres en 403-feilmelding.
+3. **Beskyttet rute**: Ruten `/dashboard` krever at brukeren er innlogget for å få tilgang. Hvis brukeren ikke er innlogget, omdiriges brukeren til innloggings siden.
 
 ### 4. Opprettelse av brukere med hashing
 
