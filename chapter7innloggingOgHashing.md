@@ -8,8 +8,10 @@ Dette eksempelet viser hvordan du kan lage et enkelt innloggingssystem med JavaS
 
 Først lager vi et HTML-skjema som sender brukernavn og passord til serveren når brukeren logger inn.
 
+
 ```html
 <form action="/login" method="POST">
+  <h2>Login med HTML form</h2>
   <label for="username">Brukernavn:</label>
   <input type="text" id="username" name="username" required>
   
@@ -18,9 +20,54 @@ Først lager vi et HTML-skjema som sender brukernavn og passord til serveren nå
   
   <button type="submit">Logg inn</button>
 </form>
-```
 
-Dette skjemaet sender en POST-forespørsel til `/login`-ruten på serveren med brukernavn og passord.
+<div class="login-box">
+      <h2>Login med Fetch (JS)</h2>
+      <input type="text" id="js-username" placeholder="Username"><br>
+      <input type="password" id="js-password" placeholder="Password"><br>
+      <button id="btnLogin">Login</button>
+      <p class="error-message" id="errorMsg">Feil brukernavn/passord</p>
+    </div>
+```
+# To forskjellige måter å sende inn data på
+ to forskjellige måter å koble front-end til back-end:
+
+1. Standard HTML form (klassisk HTTP POST). Skjemaet over sender en POST-forespørsel til `/login`-ruten på serveren med 
+   brukernavn og passord.
+2. Moderne fetch API i JavaScript (asynkron, ofte brukt med API-er). JS Fetch API-metoden er moderne, brukt i SPA 
+   (Single Page Applications), og gir bedre kontroll over hva som skjer etterpå (f.eks. vise feilmeldinger uten å reloade siden). Mens javascript koden under bruker Fetch-API til å sende en /login post forespørsel til serveren.
+
+```javascript
+const btnLogin = document.getElementById("btnLogin")
+btnLogin.addEventListener("click", login)
+async function login() {
+  const username = document.getElementById("js-username").value;
+  const password = document.getElementById("js-password").value;
+  const errorMsg = document.getElementById("errorMsg");
+
+  try {
+    const response = await fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password }),
+    });
+
+    if (response.ok) {
+      // Successful login - Redirect to app.html
+      window.location.href = "/app.html";
+    } else {
+      // Login failed - Show error message
+      const data = await response.json(); // Parse JSON response
+      errorMsg.innerText = data.message;  // Update error message
+      errorMsg.style.display = "block";  // Show error message
+    }
+  } catch (error) {
+    console.error("Login error:", error);
+    errorMsg.innerText = error.JSON
+   
+  }
+}
+```
 
 ## 2. Serverkode med Express og bcrypt
 
