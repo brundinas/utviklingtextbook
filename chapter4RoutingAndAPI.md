@@ -47,6 +47,7 @@ app.post('/user', (req, res) => {
 });
 ```
 
+# Kobling mellom frontend og backend. Bruk av skjema med direkte kobling eller bruk av JavaScript
 ## Eksempel ppsett av et RESTful API  uten database
 
 ```javascript
